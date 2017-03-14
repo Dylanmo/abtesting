@@ -1,4 +1,3 @@
-$(document).ready(function() {
 
   $("img").load(function() {
     var $productWidth = $(this).width();
@@ -43,5 +42,3 @@ var imageHolder = $('#mobile-swipebox-holder');
           }
       }
     }
-
-});

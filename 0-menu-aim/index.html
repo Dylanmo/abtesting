@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      jQuery-menu-aim: this example uses Twitter's Bootstrap
+      (http://twitter.github.com/bootstrap) to setup a clean example page.
+
+      Search for "jQuery-menu-aim" in this page to find the jQuery-menu-aim
+      integration examples.
+    -->
+
+    <meta charset="utf-8">
+    <title>jQuery-menu-aim example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/clean.css" rel="stylesheet">
+
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <style>
+        
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          
+                <!--
+                  jQuery-menu-aim: this <ul> defines the dropdown main menu and its contents.
+                  This is just one of many possible examples for defining the menu's HTML.
+                  jQuery-menu-aim is agnostic to your HTML structure, it only fires events to
+                  be used as you please.
+                -->
+                <ul class="dropdown-menu" role="menu">
+                    <li data-submenu-id="submenu-dames">
+                        <a href="#">dames</a>
+                        <div id="submenu-dames" class="popover">
+                            <h3 class="popover-title">Damesmode</h3>
+                            <div class="popover-content">
+                                <div class="submenu-w3-col">
+                                    <ul>
+                                        <li>kleding</li>
+                                        <li><a href="/damesmode/dames-blouses-tunieken/C21_1AA/">Blouses &amp; tunieken</a></li>
+                                        <li><a href="/damesmode/damesbroeken/C21_DBR/">Broeken</a></li>
+                                        <li><a href="/damesmode/dames-jassen-blazers/C21_1AC/">Jassen &amp; blazers</a></li>
+                                        <li><a href="/damesmode/dames-jeans/C21_DJS/">Jeans</a></li>
+                                        <li><a href="/damesmode/dames-jumpsuits/C21_DJU/">Jumpsuits</a></li>
+                                        <li><a href="/damesmode/dames-jurken/C21_1A1/">Jurken</a></li>
+                                        <li><a href="/damesmode/dames-rokken/C21_ROK/">Rokken</a></li>
+                                        <li><a href="/damesmode/dames-truien-vesten/C21_1AB/">Truien &amp; vesten</a></li>
+                                        <li><a href="/damesmode/dames-t-shirts-tops/C21_1A9/">T-shirts &amp; tops</a></li>
+                                        <li><a href="/damesmode/grote-maten-dameskleding/C21_1A7/">Grote maten</a></li>
+                                        <li><a href="/damesmode/positiekleding/C21_1AJ/">Positiekleding</a></li>
+                                        <li><a href="/damesmode/sportkleding-dames/C21_1AI/">Sportkleding</a></li>
+                                  </ul>
+                              </div>
+                              <div class="submenu-w3-col">
+                                    <ul>
+                                        <li>LINGERIE &amp; BADMODE</li>
+                                        <li><a href="/damesmode/dames-badmode/C21_BDM/">Badmode</a></li>
+                                        <li><a href="/damesmode/dames-lingerie/C21_1A3/">Lingerie</a></li>
+                                        <li><a href="/damesmode/dames-nachtmode-loungewear/C21_DNA/">Nachtmode &amp; loungewear</a></li>
+                                  </ul>
+                              </div>
+                              <div class="submenu-w3-col">
+                                    <ul>
+                                        <li>SCHOENEN &amp; ACCESSOIRES</li>
+                                        <li><a href="/damesmode/dames-accessoires/C21_DAC/">Accessoires</a></li>
+                                        <li><a href="/damesmode/damesbeenmode/C21_1AZ/">Beenmode</a></li>
+                                        <li><a href="/damesmode/dames-sieraden/C21_DAS/">Horloges &amp; sieraden</a></li>
+                                        <li><a href="/damesmode/dames-reisbagage/C21_1AK/">Reisbagage</a></li>
+                                        <li><a href="/damesmode/dames-schoenen/C21_DOE/">Schoenen</a></li>
+                                        <li><a href="/damesmode/dames-tassen/C21_DTS/">Tassen</a></li>
+                                        <li><a href="/damesmode/dames-winteraccessoires/C21_AC5/">Winteraccessoires</a></li>
+                                        <li><a href="/damesmode/dames-zonnebrillen/C21_A58/">Zonnebrillen</a></li>
+                                  </ul>
+                              </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-heren">
+                        <a href="#">heren</a>
+                        <div id="submenu-heren" class="popover">
+                            <h3 class="popover-title">Heren</h3>
+                            <div class="popover-content">
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>KLEDING</li>
+                                    <li><a href="/herenmode/heren-broeken/C22_2BD/">Broeken</a></li>
+                                    <li><a href="/herenmode/heren-colberts/C22_HCB/">Colberts</a></li>
+                                    <li><a href="/herenmode/grote-maten-herenkleding/C22_GMH/">Grote maten</a></li>
+                                    <li><a href="/herenmode/heren-jassen/C22_HJS/">Jassen</a></li>
+                                    <li><a href="/herenmode/heren-jeans/C22_2BC/">Jeans</a></li>
+                                    <li><a href="/herenmode/heren-kostuums/C22_2BA/">Kostuums</a></li>
+                                    <li><a href="/herenmode/heren-overhemden/C22_2B9/">Overhemden</a></li>
+                                    <li><a href="/herenmode/heren-polos/C22_PSP/">Polo's</a></li>
+                                    <li><a href="/herenmode/sportkleding-heren/C22_2B7/">Sportkleding</a></li>
+                                    <li><a href="/herenmode/heren-truien/C22_2B1/">Truien</a></li>
+                                    <li><a href="/herenmode/heren-t-shirts/C22_HTH/">T-shirts</a></li>
+                                    <li><a href="/herenmode/heren-vesten/C22_HVT/">Vesten</a></li>
+                                    </ul>
+                                </div>
+                      
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>SCHOENEN &amp; ACCESSOIRES</li>
+                                    <li><a href="/herenmode/heren-accessoires/C22_2BG/">Accessoires</a></li>
+                                    <li><a href="/herenmode/heren-horloges-sieraden/C22_2B6/">Horloges &amp; sieraden</a></li>
+                                    <li><a href="/herenmode/herenreisbagage/C22_2B0/">Reisbagage</a></li>
+                                    <li><a href="/herenmode/heren-schoenen/C22_2B2/">Schoenen</a></li>
+                                    <li><a href="/herenmode/heren-sokken/C22_SOK/">Sokken</a></li>
+                                    <li><a href="/herenmode/heren-tassen/C22_2B5/">Tassen</a></li>
+                                    <li><a href="/herenmode/heren-winteraccessoires/C22_EWW/">Winteraccessoires</a></li>
+                                    <li><a href="/herenmode/heren-zonnebrillen/C22_B56/">Zonnebrillen</a></li>
+                                    </ul>
+                                </div>
+                      
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>ONDERGOED &amp; BADMODE</li>
+                                    <li><a href="/herenmode/herenbadmode/C22_2B4/">Badmode</a></li>
+                                    <li><a href="/herenmode/heren-ondergoed-pyjamas/C22_2B3/">Ondergoed &amp; pyjama's</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-kinderen">
+                        <a href="#">kinderen</a>
+                        <div id="submenu-kinderen" class="popover">
+                            <h3 class="popover-title">Kindermode</h3>
+                            <div class="popover-content">
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>KLEDING</li>
+                                    <li><a href="/kinderen/kinderaccessoires/C23_ITJ/">Accessoires</a></li>
+                                    <li><a href="/kinderen/kinderblazers/C23_01K/">Blazers</a></li>
+                                    <li><a href="/kinderen/kinderblouses/C23_ITE/">Blouses</a></li>
+                                    <li><a href="/kinderen/kinderbroeken/C23_ITB/">Broeken</a></li>
+                                    <li><a href="/kinderen/kinderjassen/C23_IT9/">Jassen</a></li>
+                                    <li><a href="/kinderen/kinderjeans/C23_04K/">Jeans</a></li>
+                                    <li><a href="/kinderen/kinderjumpsuits/C23_07K/">Jumpsuits</a></li>
+                                    <li><a href="/kinderen/kinderjurken/C23_ITF/">Jurken</a></li>
+                                    <li><a href="/kinderen/kinder-korte-broeken/C23_08K/">Korte broeken</a></li>
+                                    <li><a href="/kinderen/kinderondergoed/C23_ITH/">Ondergoed</a></li>
+                                    <li><a href="/kinderen/kinderoverhemden/C23_ITD/">Overhemden</a></li>
+                                    </ul>
+                                </div>
+                                  
+                                  <div class="submenu-w3-col">
+                                    <ul>
+                                      <li>KLEDING</li>
+                                      <li><a href="/kinderen/kinderpolos/C23_10K/">Polo's</a></li>
+                                      <li><a href="/kinderen/kinderpyjamas/C23_11K/">Pyjama's</a></li>
+                                      <li><a href="/kinderen/kinderrokken/C23_12K/">Rokken</a></li>
+                                      <li><a href="/kinderen/kinderschoenen/C23_12S/">Schoenen</a></li>
+                                      <li><a href="/kinderen/kindersportkleding/C23_ITG/">Sportkleding</a></li>
+                                      <li><a href="/kinderen/kinder-t-shirts/C23_ITC/">T-shirts</a></li>
+                                      <li><a href="/kinderen/kindertops/C23_13K/">Topjes</a></li>
+                                      <li><a href="/kinderen/kindertruien/C23_ITA/">Truien</a></li>
+                                      <li><a href="/kinderen/kindertunieken/C23_14K/">Tunieken</a></li>
+                                      <li><a href="/kinderen/kindervesten/C23_15K/">Vesten</a></li>
+                                      <li><a href="/kinderen/kinderzwemkleding/C23_ITI/">Zwemkleding</a></li>
+                                      </ul>
+                                  </div>
+
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>BABY &amp; KINDEREN</li>
+                                    <li><a href="/kinderen/jongenskleding/C23_3K2/">Jongenskleding</a></li>
+                                    <li><a href="/kinderen/jongensschoenen/C23_3K6/">Jongensschoenen</a></li>
+                                    <li><a href="/kinderen/meisjeskleding/C23_3K1/">Meisjeskleding</a></li>
+                                    <li><a href="/kinderen/meisjesschoenen/C23_3K7/">Meisjesschoenen</a></li>
+                                    <li><a href="/kinderen/babykleding/C23_3K3/">Babykleding</a></li>
+                                    <li><a href="/kinderen/babyschoenen/C23_BBS/">Babyschoenen</a></li>
+                                    </ul>
+                                    
+                                    <ul>
+                                    <li>SPEELGOED</li>
+                                    <li><a href="/kinderen/speelgoed/C23_3K5/">Speelgoed</a></li>
+                                    <li><a href="/kinderen/babyspeelgoed/C23_BPS/">Babyspeelgoed</a></li>
+                                    <li><a href="/kinderen/peuterspeelgoed/C23_IU4/">Peuterspeelgoed</a></li>
+                                    <li><a href="/kinderen/buitenspeelgoed/C23_3K4/">Buitenspeelgoed</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-baby">
+                        <a href="#">baby</a>
+                        <div id="submenu-baby" class="popover">
+                            <h3 class="popover-title">Baby</h3>
+                            <div class="popover-content">
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>KLEDING</li>
+                                    <li><a href="/baby/babykleding/C50_3K3/">Babykleding</a></li>
+                                    <li><a href="/baby/positiekleding/C50_1AJ/">Positiekleding</a></li>
+                                    <li><a href="/baby/babyschoenen/C50_BBS/">Babyschoenen</a></li>                                    
+                                    </ul>
+                      
+                                    <ul>
+                                      <li>LUIERS &amp; VERZORGING</li>
+                                      <li><a href="/baby/luiers/C50_C57/">Luiers</a></li>
+                                      <li><a href="/baby/babydoekjes/C50_I80/">Babydoekjes</a></li>
+                                      <li><a href="/baby/verzorging/C50_C72/">Verzorging</a></li>
+                                      <li><a href="/baby/in-bad/C50_C71/">In bad</a></li>                                      
+                                      </ul>
+                      
+                                      <ul>
+                                        <li>CADEAUS</li>
+                                        <li><a href="/baby/kraamcadeaus/C50_M37/">Kraamcadeaus</a></li>
+                                        </ul>
+                                </div>
+                      
+                      
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>ETEN &amp; DRINKEN</li>
+                                    <li><a href="/baby/borstvoeding/C50_IHS/">Borstvoeding</a></li>
+                                    <li><a href="/baby/babyvoeding/C50_C73/">Babyvoeding</a></li>
+                                    <li><a href="/baby/voedingsaccessoires/C50_C74/">Accessoires</a></li>                                    
+                                    </ul>
+                                    <ul>
+                                      <li>ONDERWEG</li>
+                                      <li><a href="/baby/autostoeltjes/C50_K38/">Autostoeltjes</a></li>
+                                      <li><a href="/baby/kinderwagens/C50_K88/">Kinderwagens</a></li>
+                                      <li><a href="/baby/buggys/C50_IU8/">Buggy's</a></li>
+                                      <li><a href="/baby/fiets/C50_IUB/">Fiets</a></li>
+                                      <li><a href="/baby/babydragers/C50_C75/">Babydragers</a></li>
+                                      </ul>
+                                </div>
+                      
+                      
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>THUIS &amp; SLAPEN</li>
+                                    <li><a href="/baby/babykamer/C50_8KR/">Babykamer</a></li>
+                                    <li><a href="/baby/babybedtextiel/C50_HX9/">Babybedtextiel</a></li>
+                                    <li><a href="/baby/kinderstoelen/C50_K37/">Kinderstoelen</a></li>
+                                    <li><a href="/baby/babyfoons/C50_K35/">Babyfoons</a></li>
+                                    <li><a href="/baby/veiligheid/C50_C66/">Veiligheid</a></li>
+                                    <li><a href="/baby/boxen/C50_C61/">Boxen</a></li>                                    
+                                    </ul>
+                      
+                                    <ul>
+                                      <li>SPEELGOED</li>
+                                      <li><a href="/baby/babyspeelgoed/C50_BPS/">Babyspeelgoed</a></li>
+                                      <li><a href="/baby/peuterspeelgoed/C50_IU4/">Peuterspeelgoed</a></li>
+                                      </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-wonen-slapen">
+                        <a href="#">wonen &amp; slapen</a>
+                        <div id="submenu-wonen-slapen" class="popover">
+                            <h3 class="popover-title">Wonen &amp; Slapen</h3>
+                            <div class="popover-content">
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>WONEN</li>
+                                    <li><a href="/wonen-slapen/banken/C28_8H1/">Banken</a></li>
+                                    <li><a href="/wonen-slapen/stoelen/C28_8KS/">Stoelen</a></li>
+                                    <li><a href="/wonen-slapen/tafels/C28_8K9/">Tafels</a></li>
+                                    <li><a href="/wonen-slapen/kasten/C28_8KA/">Kasten</a></li>
+                                    <li><a href="/wonen-slapen/bureaus-bureaustoelen/C28_8H7/">Bureaus &amp; bureaustoelen</a></li>
+                                    <li><a href="/wonen-slapen/vloerkleden/C28_8K2/">Vloerkleden</a></li>
+                                    <li><a href="/wonen-slapen/lampen/C28_8K3/">Lampen</a></li>
+                                    <li><a href="/wonen-slapen/woonaccessoires/C28_8K4/">Woonaccessoires</a></li>
+                                    <li><a href="/wonen-slapen/feestversiering/C28_DDP/">Feestversiering</a></li>
+                                    <li><a href="/wonen-slapen/opbergen/C28_HTP/">Opbergen</a></li>
+                                    <li><a href="/wonen-slapen/gordijnen-jaloezieen/C28_8HC/">Gordijnen &amp; jaloezieen</a></li>
+                                    <li><a href="/wonen-slapen/vloeren/C28_8HD/">Vloeren</a></li>
+                                    </ul>
+                                </div>
+                      
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>KOKEN &amp; TAFELEN</li>
+                                    <li><a href="/wonen-slapen/servies/C28_T05/">Servies</a></li>
+                                    <li><a href="/wonen-slapen/bestek/C28_T06/">Bestek</a></li>
+                                    <li><a href="/wonen-slapen/glazen-karaffen/C28_T04/">Glazen &amp; karaffen</a></li>
+                                    <li><a href="/wonen-slapen/keukentextiel/C28_T03/">Keukentextiel</a></li>
+                                    <li><a href="/wonen-slapen/keukengerei/C28_7G9/">Keukengerei</a></li>
+                                    <li><a href="/wonen-slapen/pannen/C28_7GD/">Pannen</a></li>
+                                    
+                                    </ul>
+                      
+                                    <ul>
+                                      <li>BADKAMER</li>
+                                      <li><a href="/wonen-slapen/badtextiel/C28_H6P/">Badtextiel</a></li>
+                                      <li><a href="/wonen-slapen/badkameraccessoires/C28_H8Q/">Badkameraccessoires</a></li>
+                                      <li><a href="/wonen-slapen/sanitair/C28_H7Q/">Sanitair</a></li>
+                                      <li><a href="/wonen-slapen/badkamermeubelen/C28_H31/">Badkamermeubelen</a></li>
+                                      </ul>
+                                </div>
+                      
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>SLAPEN</li>
+                                    <li><a href="/wonen-slapen/boxsprings/C28_8KP/">Boxsprings</a></li>
+                                    <li><a href="/wonen-slapen/bedden/C28_8H2/">Bedden</a></li>
+                                    <li><a href="/wonen-slapen/beddengoed/C28_8H3/">Beddengoed</a></li>
+                                    <li><a href="/wonen-slapen/matrassen/C28_8K6/">Matrassen</a></li>
+                                    <li><a href="/wonen-slapen/kinderkamer/C28_8K1/">Kinderkamer</a></li>
+                                    <li><a href="/wonen-slapen/babykamer/C28_8KR/">Babykamer</a></li>
+                                    <li><a href="/wonen-slapen/slaapkamerkasten/C28_8KT/">Slaapkamerkasten</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-tuin-klussen">
+                        <a href="#">tuin &amp; klussen</a>
+                        <div id="submenu-tuin-klussen" class="popover">
+                            <h3 class="popover-title">Tuin &amp; Klussen</h3>
+                            <div class="popover-content">
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>TUIN</li>
+                                    <li><a href="/tuin-klussen/tuinmeubelen/C30_8H6/">Tuinmeubelen</a></li>
+                                    <li><a href="/tuin-klussen/tuindecoratie/C30_8H4/">Tuindecoratie</a></li>
+                                    <li><a href="/tuin-klussen/tuingereedschap/C30_8H8/">Tuingereedschap</a></li>
+                                    <li><a href="/tuin-klussen/tuinhuizen-kassen-opbergen/C30_8H9/">Tuinhuizen, kassen &amp; opbergen</a></li>
+                                    <li><a href="/tuin-klussen/tuininrichting/C30_HU2/">Tuininrichting</a></li>
+                                    <li><a href="/tuin-klussen/huisdieren/C30_8KG/">Huisdieren</a></li>
+                                    <li><a href="/tuin-klussen/tuinverlichting/C30_8HY/">Tuinverlichting</a></li>
+                                    <li><a href="/tuin-klussen/terrasverwarming/C30_8HQ/">Terrasverwarming</a></li>
+                                    <li><a href="/tuin-klussen/barbecues/C30_8HA/">Barbecues</a></li>
+                                    <li><a href="/tuin-klussen/parasols-partytenten/C30_8HX/">Parasols &amp; partytenten</a></li>
+                                    <li><a href="/tuin-klussen/zwembaden/C30_8HF/">Zwembaden</a></li>
+                                    <li><a href="/tuin-klussen/buitenspeelgoed/C30_3K4/">Buitenspeelgoed</a></li>
+                                    </ul>
+                                </div>
+                      
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>KLUSSEN</li>
+                                    <li><a href="/tuin-klussen/boormachines/C30_8H5/">Boormachines</a></li>
+                                    <li><a href="/tuin-klussen/zaagmachines/C30_H54/">Zaagmachines</a></li>
+                                    <li><a href="/tuin-klussen/schuurmachines/C30_H83/">Schuurmachines</a></li>
+                                    <li><a href="/tuin-klussen/schaven-frezen-slijpen/C30_H5B/">Schaven, frezen &amp; slijpen</a></li>
+                                    <li><a href="/tuin-klussen/klusaccessoires/C30_8HW/">Klusaccessoires</a></li>
+                                    <li><a href="/tuin-klussen/ladders-trappen-steigers/C30_8HG/">Ladders, trappen &amp; steigers</a></li>
+                                    <li><a href="/tuin-klussen/beveiliging/C30_8HU/">Beveiliging</a></li>
+                                    <li><a href="/tuin-klussen/veiligheid/C30_8HE/">Veiligheid</a></li>
+                                    <li><a href="/tuin-klussen/gordijnen-jaloezieen/C30_8HC/">Gordijnen &amp; jaloezieen</a></li>
+                                    <li><a href="/tuin-klussen/vloeren/C30_8HD/">Vloeren</a></li>
+                                    </ul>
+                                </div>
+                      
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>BADKAMER</li>
+                                    <li><a href="/tuin-klussen/badkamermeubelen/C30_H31/">Badkamermeubelen</a></li>
+                                    <li><a href="/tuin-klussen/badkameraccessoires/C30_H8Q/">Badkameraccessoires</a></li>
+                                    <li><a href="/tuin-klussen/douches/C30_H3H/">Douches</a></li>
+                                    <li><a href="/tuin-klussen/kranen/C30_H5H/">Kranen</a></li>
+                                    <li><a href="/tuin-klussen/sanitair/C30_H7Q/">Sanitair</a></li>
+                                    <li><a href="/tuin-klussen/badtextiel/C30_H6P/">Badtextiel</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-huishouden">
+                        <a href="#">huishouden</a>
+                        <div id="submenu-huishouden" class="popover">
+                            <h3 class="popover-title">Huishouden</h3>
+                            <div class="popover-content">
+                                <div class="submenu-w2-col">
+                                  <ul>
+                                    <li>WASSEN &amp; DROGEN</li>
+                                    <li><a href="/huishouden/wasmachines/C27_7G1/">Wasmachines</a></li>
+                                    <li><a href="/huishouden/wasdrogers/C27_7GH/">Wasdrogers</a></li>
+                                    
+                                    </ul>
+                      
+                                    <ul>
+                                      <li>HUISHOUDEN</li>
+                                      <li><a href="/huishouden/stofzuigers/C27_7G6/">Stofzuigers</a></li>
+                                      <li><a href="/huishouden/stoomreinigers/C27_7GK/">Stoomreinigers</a></li>
+                                      <li><a href="/huishouden/strijksystemen/C27_7GA/">Strijksystemen</a></li>
+                                      <li><a href="/huishouden/naaimachines/C27_7GB/">Naaimachines</a></li>
+                                      <li><a href="/huishouden/verwarming/C27_7HL/">Verwarming</a></li>
+                                      <li><a href="/huishouden/luchtbehandeling/C27_7G7/">Luchtbehandeling</a></li>
+                                      <li><a href="/huishouden/verkoeling/C27_7HM/">Verkoeling</a></li>
+                                      </ul>
+                                </div>
+                      
+                                <div class="submenu-w2-col">
+                                  <ul>
+                                    <li>KEUKEN</li>
+                                    <li><a href="/huishouden/inbouwapparatuur/C27_7G8/">Inbouwapparatuur</a></li>
+                                    <li><a href="/huishouden/koelkasten/C27_7G2/">Koelkasten</a></li>
+                                    <li><a href="/huishouden/vriezers/C27_7GL/">Vriezers</a></li>
+                                    <li><a href="/huishouden/vaatwassers/C27_7GC/">Vaatwassers</a></li>
+                                    <li><a href="/huishouden/koffiemachines/C27_7G5/">Koffiemachines</a></li>
+                                    <li><a href="/huishouden/waterkokers/C27_7G0/">Waterkokers</a></li>
+                                    <li><a href="/huishouden/ijsmachines/C27_7HA/">IJsmachines</a></li>
+                                    <li><a href="/huishouden/blenders-juicers/C27_7G4/">Blenders &amp; juicers</a></li>
+                                    <li><a href="/huishouden/keukenmachines-mixers/C27_7GY/">Keukenmachines &amp; mixers</a></li>
+                                    <li><a href="/huishouden/friteuses-gourmetstellen/C27_7GW/">Friteuses &amp; gourmetstellen</a></li>
+                                    <li><a href="/huishouden/broodroosters-contactgrills/C27_7GZ/">Broodroosters &amp; contactgrills</a></li>
+                                    <li><a href="/huishouden/magnetrons-ovens/C27_7GM/">Magnetrons &amp; ovens</a></li>
+                                    <li><a href="/huishouden/fornuizen-kookplaten/C27_7G3/">Fornuizen &amp; kookplaten</a></li>
+                                    <li><a href="/huishouden/pannen/C27_7GD/">Pannen</a></li>
+                                    <li><a href="/huishouden/keukengerei/C27_7G9/">Keukengerei</a></li>
+                                    <li><a href="/huishouden/prullenbakken/C27_7GT/">Prullenbakken</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-elektronica">
+                        <a href="#">elektronica</a>
+                        <div id="submenu-elektronica" class="popover">
+                            <h3 class="popover-title">Elektronica</h3>
+                            <div class="popover-content">
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>BEELD &amp; GELUID</li>
+                                    <li><a href="/elektronica/televisies/C26_6F1/">Televisies</a></li>
+                                    <li><a href="/elektronica/dvd-blu-ray-spelers/C26_6FD/">DVD &amp; Blu-ray spelers</a></li>
+                                    <li><a href="/elektronica/audio-hifi/C26_6F2/">Audio &amp; HiFi</a></li>
+                                    <li><a href="/elektronica/radios/C26_7F7/">Radio's</a></li>
+                                    <li><a href="/elektronica/draadloze-speakers/C26_7F1/">Draadloze speakers</a></li>
+                                    <li><a href="/elektronica/ipod-mp3/C26_6F8/">iPod &amp; MP3</a></li>
+                                    <li><a href="/elektronica/koptelefoons/C26_7F3/">Koptelefoons</a></li>
+                                    <li><a href="/elektronica/dj-gear-muziekinstrumenten/C26_7F2/">DJ gear &amp; muziekinstrumenten</a></li>
+                                    <li><a href="/elektronica/kabels/C26_PSX/">Kabels</a></li>
+                                    
+                                    </ul>
+                      
+                                    <ul>
+                                      <li>TELECOM</li>
+                                      <li><a href="/elektronica/wearables/C26_4DD/">Wearables</a></li>
+                                      <li><a href="/elektronica/mobiele-telefoons/C26_6F7/">Mobiele telefoons</a></li>
+                                      <li><a href="/elektronica/mobiele-telefoon-accessoires/C26_6FI/">Mobiele telefoon accessoires</a></li>
+                                      <li><a href="/elektronica/huistelefoons/C26_6FG/">Huistelefoons</a></li>
+                                      </ul>
+                                </div>
+                      
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>COMPUTER</li>
+                                    <li><a href="/elektronica/ereaders/C26_6FJ/">Ereaders</a></li>
+                                    <li><a href="/elektronica/ipad-tablets/C26_6F0/">iPad &amp; tablets</a></li>
+                                    <li><a href="/elektronica/laptops/C26_6F4/">Laptops</a></li>
+                                    <li><a href="/elektronica/monitoren/C26_F4B/">Monitoren</a></li>
+                                    <li><a href="/elektronica/printers-cartridges/C26_6F5/">Printers &amp; cartridges</a></li>
+                                    <li><a href="/elektronica/desktops/C26_6FA/">Desktops</a></li>
+                                    <li><a href="/elektronica/harde-schijven-opslag/C26_6FB/">Harde schijven &amp; opslag</a></li>
+                                    <li><a href="/elektronica/kantoorartikelen/C26_6FC/">Kantoorartikelen</a></li>
+                                    <li><a href="/elektronica/netwerk-internet/C26_6FE/">Netwerk &amp; internet</a></li>
+                                    <li><a href="/elektronica/randapparatuur/C26_6FF/">Randapparatuur</a></li>
+                                    <li><a href="/elektronica/consoles-games/C26_GME/">Consoles &amp; Games</a></li>
+                                    <li><a href="/elektronica/software/C26_6HI/">Software</a></li>
+                                    </ul>
+                                </div>
+                      
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>FOTO &amp; VIDEO</li>
+                                    <li><a href="/elektronica/digitale-cameras/C26_6F3/">Digitale camera's</a></li>
+                                    <li><a href="/elektronica/videocameras/C26_6F9/">Videocamera's</a></li>
+                                    
+                                    </ul>
+                      
+                                  <ul>
+                                    <li>NAVIGATIE &amp; CAR-HIFI</li>
+                                    <li><a href="/elektronica/autoradios/C26_6FH/">Autoradio's</a></li>
+                                    <li><a href="/elektronica/navigatie/C26_6F6/">Navigatie</a></li>
+                                    
+                                    </ul>
+                      
+                                  <ul>
+                                    <li>PERSOONLIJKE VERZORGING</li>
+                                    <li><a href="/elektronica/mondverzorging/C26_JD2/">Mondverzorging</a></li>
+                                    <li><a href="/elektronica/haarverzorging/C26_JD3/">Haarverzorging</a></li>
+                                    <li><a href="/elektronica/gezichtsverzorging/C26_JD4/">Gezichtsverzorging</a></li>
+                                    <li><a href="/elektronica/scheerapparaten/C26_JD5/">Scheerapparaten</a></li>
+                                    <li><a href="/elektronica/ontharen/C26_JD6/">Ontharen</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-speelgoed-games">
+                        <a href="#">speelgoed &amp; games</a>
+                        <div id="submenu-speelgoed-games" class="popover">
+                            <h3 class="popover-title">Speelgoed &amp; Games</h3>
+                            <div class="popover-content">
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>SPEELGOED</li>
+                                    <li><a href="/speelgoed-games/speelgoed/C25_3K5/">Speelgoed</a></li>
+                                    <li><a href="/speelgoed-games/babyspeelgoed/C25_BPS/">Babyspeelgoed</a></li>
+                                    <li><a href="/speelgoed-games/peuterspeelgoed/C25_IU4/">Peuterspeelgoed</a></li>
+                                    <li><a href="/speelgoed-games/knutselen/C25_HOB/">Knutselen</a></li>
+                                    <li><a href="/speelgoed-games/puzzels/C25_PZL/">Puzzels</a></li>
+                                    <li><a href="/speelgoed-games/spellen/C25_K56/">Spellen</a></li>
+                                    <li><a href="/speelgoed-games/speeltafels/C25_K57/">Speeltafels</a></li>
+                                    <li><a href="/speelgoed-games/voertuigen/C25_BP6/">Voertuigen</a></li>
+                                    <li><a href="/speelgoed-games/lego/C25_K58/">LEGO</a></li>
+                                    <li><a href="/speelgoed-games/playmobil/C25_K59/">Playmobil</a></li>
+                                    <li><a href="/speelgoed-games/buitenspeelgoed/C25_3K4/">Buitenspeelgoed</a></li>
+                                    </ul>
+                                </div>
+                      
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>CONSOLES</li>
+                                    <li><a href="/speelgoed-games/playstation-4/C25_5EB/">PlayStation 4</a></li>
+                                    <li><a href="/speelgoed-games/playstation-3/C25_5EA/">PlayStation 3</a></li>
+                                    <li><a href="/speelgoed-games/xbox-one/C25_5EF/">Xbox One</a></li>
+                                    <li><a href="/speelgoed-games/xbox-360/C25_5EC/">Xbox 360</a></li>
+                                    <li><a href="/speelgoed-games/nintendo-switch/C25_NNS/">Nintendo Switch</a></li>
+                                    <li><a href="/speelgoed-games/nintendo-wii-u/C25_5EE/">Nintendo Wii U</a></li>
+                                    <li><a href="/speelgoed-games/nintendo-wii/C25_5E2/">Nintendo Wii</a></li>
+                                    <li><a href="/speelgoed-games/nintendo-3ds-xl/C25_5E1/">Nintendo 3DS (XL)</a></li>
+                                    <li><a href="/speelgoed-games/nintendo-2ds/C25_5E8/">Nintendo 2DS</a></li>
+                                    <li><a href="/speelgoed-games/pc/C25_5E7/">PC</a></li>
+                                    <li><a href="/speelgoed-games/kindertablets/C25_5E6/">Kindertablets</a></li>
+                                    </ul>
+                      
+                      
+                                </div>
+                      
+                                <div class="submenu-w3-col">
+                      
+                      
+                                  <ul>
+                                    <li>GAMES</li>
+                                    <li><a href="/speelgoed-games/games/C25_E88/">Games</a></li>
+                                    <li><a href="/speelgoed-games/pre-orders/C25_E89/">Pre-orders</a></li>
+                                    
+                                    </ul>
+                      
+                      
+                                  <ul>
+                                    <li>ACCESSOIRES</li>
+                                    <li><a href="/speelgoed-games/game-accessoires/C25_E90/">Game-accessoires</a></li>
+                                    
+                                    </ul>
+                      
+                                    <ul>
+                                      <li>BOEKEN, CD'S &amp; FILMS</li>
+                                        <li><a href="/speelgoed-games/blu-rays/C25_5E4/">Blu-ray's</a></li>
+                                        <li><a href="/speelgoed-games/boeken/C25_BA5/">Boeken</a></li>
+                                        <li><a href="/speelgoed-games/cds/C25_CD1/">CD's</a></li>
+                                        <li><a href="/speelgoed-games/dvds/C25_5E3/">DVD's</a></li>
+                                      </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-sport-vrijetijd">
+                        <a href="#">sport &amp; vrije tijd</a>
+                        <div id="submenu-sport-vrijetijd" class="popover">
+                            <h3 class="popover-title">Sport &amp; Vrije tijd</h3>
+                            <div class="popover-content">
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>SPORTEN</li>
+                                    <li><a href="/sport-vrije-tijd/sportkleding/C24_4D2/">Sportkleding</a></li>
+                                    <li><a href="/sport-vrije-tijd/hardlopen/C24_D46/">Hardlopen</a></li>
+                                    <li><a href="/sport-vrije-tijd/fitnesskleding-schoenen/C24_DB8/">Fitnesskleding &amp; -schoenen</a></li>
+                                    <li><a href="/sport-vrije-tijd/fitnessapparatuur/C24_4D6/">Fitnessapparatuur</a></li>
+                                    <li><a href="/sport-vrije-tijd/fitnessaccessoires/C24_4DC/">Fitnessaccessoires</a></li>
+                                    <li><a href="/sport-vrije-tijd/voetbal/C24_D48/">Voetbal</a></li>
+                                    <li><a href="/sport-vrije-tijd/tennis/C24_DGZ/">Tennis</a></li>
+                                    <li><a href="/sport-vrije-tijd/hockey/C24_HOC/">Hockey</a></li>
+                                    <li><a href="/sport-vrije-tijd/zaalsporten/C24_IND/">Zaalsporten</a></li>
+                                    <li><a href="/sport-vrije-tijd/dansen-ballet/C24_D97/">Dansen &amp; ballet</a></li>
+                                    <li><a href="/sport-vrije-tijd/zwemmen/C24_D4A/">Zwemmen</a></li>
+                                    <li><a href="/sport-vrije-tijd/wearables/C24_4DD/">Wearables</a></li>
+                                    <li><a href="/sport-vrije-tijd/krachttraining/C24_4DA/">Krachttraining</a></li>
+                                    <li><a href="/sport-vrije-tijd/cardiotraining/C24_4DB/">Cardiotraining</a></li>
+                                    </ul>
+                                </div>
+                      
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>SPORTS FASHION</li>
+                                    <li><a href="/sport-vrije-tijd/sneakers/C24_DIE/">Sneakers</a></li>
+                                    <li><a href="/sport-vrije-tijd/streetwear/C24_SW1/">Streetwear</a></li>
+                                    
+                                    </ul>
+                      
+                                  <ul>
+                                    <li>BODY &amp; MIND</li>
+                                    <li><a href="/sport-vrije-tijd/yoga/C24_YOG/">Yoga</a></li>
+                                    <li><a href="/sport-vrije-tijd/wellness/C24_9I4/">Wellness</a></li>
+                                    <li><a href="/sport-vrije-tijd/gezondheid/C24_4D4/">Gezondheid</a></li>
+                                    <li><a href="/sport-vrije-tijd/gezond-koken/C24_4DM/">Gezond koken</a></li>
+                                    </ul>
+                                </div>
+                      
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>OUTDOOR</li>
+                                    <li><a href="/sport-vrije-tijd/wandelen-outdoor/C24_4D7/">Wandelen &amp; outdoor</a></li>
+                                    <li><a href="/sport-vrije-tijd/wintersport/C24_D49/">Wintersport</a></li>
+                                    <li><a href="/sport-vrije-tijd/regenkleding/C24_DBD/">Regenkleding</a></li>
+                                    <li><a href="/sport-vrije-tijd/kamperen/C24_DIA/">Kamperen</a></li>
+                                    <li><a href="/sport-vrije-tijd/koffers-reisbagage/C24_4D1/">Koffers &amp; reisbagage</a></li>
+                                    
+                                    </ul>
+                      
+                                  <ul>
+                                    <li>SPEELGOED</li>
+                                    <li><a href="/sport-vrije-tijd/speelgoed/C24_3K5/">Speelgoed</a></li>
+                                    <li><a href="/sport-vrije-tijd/buitenspeelgoed/C24_3K4/">Buitenspeelgoed</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-mooi-gezond">
+                        <a href="#">mooi &amp; gezond</a>
+                        <div id="submenu-mooi-gezond" class="popover">
+                            <h3 class="popover-title">Mooi & Gezond</h3>
+                            <div class="popover-content">
+                                <div class="submenu-w3-col">
+                                    <ul>
+                                        <li>MAKE-UP &amp; GEUREN</li>
+                                        <li><a href="/mooi-gezond/geuren-parfum/C29_9I6/">Geuren &amp; parfum</a></li>
+                                        <li><a href="/mooi-gezond/make-up/C29_9I7/">Make-up</a></li>
+                                     </ul>                  
+                                     <ul>
+                                        <li>VERZORGING</li>
+                                        <li><a href="/mooi-gezond/gezichtsverzorging/C29_9I2/">Gezichtsverzorging</a></li>
+                                        <li><a href="/mooi-gezond/haarverzorging/C29_9IE/">Haarverzorging</a></li>
+                                        <li><a href="/mooi-gezond/handverzorging/C29_I24/">Handverzorging</a></li>
+                                        <li><a href="/mooi-gezond/lichaamsverzorging/C29_9IC/">Lichaamsverzorging</a></li>
+                                        <li><a href="/mooi-gezond/mondverzorging/C29_9IB/">Mondverzorging</a></li>
+                                        <li><a href="/mooi-gezond/voetverzorging/C29_I93/">Voetverzorging</a></li>
+                                        <li><a href="/mooi-gezond/zonnen/C29_IC5/">Zonnen</a></li>
+                                      </ul>                  
+                                  </div>
+  
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>GEZONDHEID</li>
+                                      <li><a href="/mooi-gezond/afvallen/C29_9IK/">Afvallen</a></li>
+                                      <li><a href="/mooi-gezond/ehbo/C29_ID0/">EHBO</a></li>
+                                      <li><a href="/mooi-gezond/homeopatische-middelen/C29_IQ4/">Homeopatische middelen</a></li>
+                                      <li><a href="/mooi-gezond/medische-hulpmiddelen/C29_I13/">Medische hulpmiddelen</a></li>
+                                      <li><a href="/mooi-gezond/voedingssupplementen/C29_IE3/">Voedingssupplementen</a></li>
+                                      <li><a href="/mooi-gezond/zelfzorg/C29_ZLZ/">Zelfzorg</a></li>
+                                    </ul>
+                                </div>
+                      
+                                <div class="submenu-w3-col">
+                                  <ul>
+                                    <li>SCHEREN &amp; ONTHAREN</li>
+                                      <li><a href="/mooi-gezond/ontharen/C29_IC6/">Ontharen</a></li>
+                                      <li><a href="/mooi-gezond/scheren/C29_9IG/">Scheren</a></li>
+                                      
+                                    </ul>
+                                  <ul>
+                                    <li>WELLNESS</li>
+                                      <li><a href="/mooi-gezond/wellness/C29_9I4/">Wellness</a></li>
+                                      
+                                    </ul>
+                      
+                                  <ul>
+                                    <li>INTIMITEIT</li>
+                                      <li><a href="/mooi-gezond/intimiteit/C29_9IJ/">Intimiteit</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-sale">
+                        <a href="#">sale</a>
+                        <div id="submenu-sale" class="popover">
+                            <h3 class="popover-title">Sale</h3>
+                            <div class="popover-content"></div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-sale">
+                        <a href="#">sale</a>
+                        <div id="submenu-sale" class="popover">
+                            <h3 class="popover-title">Sale</h3>
+                            <div class="popover-content"></div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-sale">
+                        <a href="#">sale</a>
+                        <div id="submenu-sale" class="popover">
+                            <h3 class="popover-title">Sale</h3>
+                            <div class="popover-content"></div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-sale">
+                        <a href="#">sale</a>
+                        <div id="submenu-sale" class="popover">
+                            <h3 class="popover-title">Sale</h3>
+                            <div class="popover-content"></div>
+                        </div>
+                    </li>
+                </ul>
+
+        </div>
+    </div>
+
+
+
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="https://cdn.rawgit.com/Dylanmo/abtesting/master/jquery.menu-aim.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script>
+
+        var $menu = $(".dropdown-menu");
+
+        // jQuery-menu-aim: <meaningful part of the example>
+        // Hook up events to be fired on menu row activation.
+        $menu.menuAim({
+            activate: activateSubmenu,
+            deactivate: deactivateSubmenu
+        });
+        // jQuery-menu-aim: </meaningful part of the example>
+
+        // jQuery-menu-aim: the following JS is used to show and hide the submenu
+        // contents. Again, this can be done in any number of ways. jQuery-menu-aim
+        // doesn't care how you do this, it just fires the activate and deactivate
+        // events at the right times so you know when to show and hide your submenus.
+        function activateSubmenu(row) {
+            var $row = $(row),
+                submenuId = $row.data("submenuId"),
+                $submenu = $("#" + submenuId),
+                height = $menu.outerHeight(),
+                width = $menu.outerWidth();
+
+            // Show the submenu
+            $submenu.css({
+                display: "block",
+                top: -1,
+                left: width - 3,  // main should overlay submenu
+                height: height - 4  // padding for main dropdown's arrow
+            });
+
+            // Keep the currently activated row's highlighted look
+            $row.find("a").addClass("maintainHover");
+        }
+
+        function deactivateSubmenu(row) {
+            var $row = $(row),
+                submenuId = $row.data("submenuId"),
+                $submenu = $("#" + submenuId);
+
+            // Hide the submenu and remove the row's highlighted look
+            $submenu.css("display", "none");
+            $row.find("a").removeClass("maintainHover");
+        }
+
+        // Bootstrap's dropdown menus immediately close on document click.
+        // Don't let this event close the menu if a submenu is being clicked.
+        // This event propagation control doesn't belong in the menu-aim plugin
+        // itself because the plugin is agnostic to bootstrap.
+        $(".dropdown-menu li").click(function(e) {
+            e.stopPropagation();
+        });
+
+        $(document).click(function() {
+            // Simply hide the submenu on any click. Again, this is just a hacked
+            // together menu/submenu structure to show the use of jQuery-menu-aim.
+            $(".popover").css("display", "none");
+            $("a.maintainHover").removeClass("maintainHover");
+        });
+
+    </script>
+
+  </body>
+</html>
+
